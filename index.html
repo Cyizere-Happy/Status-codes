@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Images/Dishup 1.png" type="image/png">
+    <title>404 - Page Not Found | Dish Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", serif;
+    box-sizing: border-box;
+}
+
+.wave-header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+@keyframes waveFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    animation: waveFloat 6s ease-in-out infinite;
+}
+
+.main {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.main h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.main img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    width: 300px;
+    height: 300px;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(2deg); }
+    75% { transform: translateY(10px) rotate(-2deg); }
+}
+.main h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #333;
+    animation: slideIn 0.8s ease-out;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.main p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    animation: slideIn 1s ease-out;
+}
+button {
+    background-color: #b32400;
+    border: 2px solid #b32400;
+    border-radius: 50px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: inline-block;
+    animation: fadeInUp 1.2s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+button:hover {
+    transform: translateY(-2px);
+    background-color: transparent;
+    box-shadow: 0 4px 12px rgba(179, 36, 0, 0.15);
+}
+button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+button:hover::after {
+    left: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover a {
+    color: #b32400;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 15px;
+    }
+
+    .main h3 {
+        font-size: 2.5rem;
+        color: #b32400;
+        text-shadow: none;
+    }
+
+    .main h2 {
+        font-size: 1.5rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+
+    .main img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main h3 {
+        font-size: 2rem;
+        color: #b32400;
+        text-shadow: none;
+    }
+
+    .main h2 {
+        font-size: 1.25rem;
+    }
+
+    .main img {
+        width: 200px;
+        height: 200px;
+    }
+
+    button {
+        padding: 10px 25px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="wave-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#b32400" fill-opacity="1" d="M0,320L40,277.3C80,235,160,149,240,149.3C320,149,400,235,480,245.3C560,256,640,192,720,176C800,160,880,192,960,202.7C1040,213,1120,203,1200,170.7C1280,139,1360,85,1400,58.7L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+        <div class="main">
+            <div class="container">
+                <h3>Oops!</h3>
+                <img src="./404 error with portals-amico.png" alt="404 Error Illustration">
+                <h2>Looks like you're lost!</h2>
+                <p>The page you're looking for is not available</p>
+                <button><a href="#">Go back</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
